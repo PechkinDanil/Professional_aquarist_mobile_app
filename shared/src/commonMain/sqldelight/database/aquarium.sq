@@ -1,0 +1,109 @@
+CREATE TABLE aquariumEntitiy(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    imageUrl TEXT,
+    name TEXT,
+    description TEXT,
+    currentTags TEXT,
+    requiredTags TEXT,
+    liters REAL,
+    minIllumination REAL,
+    currentIllumination REAL,
+    currentCO2 REAL,
+    minCO2 REAL,
+    currentTemperature REAL,
+    minTemperature REAL,
+    maxTemperature REAL,
+    currentPh REAL,
+    minPh REAL,
+    maxPh REAL,
+    currentGh REAL,
+    minGh REAL,
+    maxGh REAL,
+    currentKh REAL,
+    minKh REAL,
+    maxKh REAL,
+    currentK REAL,
+    minK REAL,
+    maxK REAL,
+    currentNO3 REAL,
+    minNO3 REAL,
+    maxNO3 REAL,
+    currentFe REAL,
+    minFe REAL,
+    maxFe REAL,
+    currentCa REAL,
+    minCa REAL,
+    maxCa REAL,
+    currentMg REAL,
+    minMg REAL,
+    maxMg REAL,
+    currentPO4 REAL,
+    minPO4 REAL,
+    maxPO4 REAL,
+    currentAmmonia REAL,
+    minAmmonia REAL,
+    maxAmmonia REAL
+);
+
+getAllAquariums:
+SELECT *
+FROM aquariumEntitiy;
+
+getAquariumById:
+SELECT *
+FROM aquariumEntitiy
+WHERE id = ?;
+
+insertAquarium:
+INSERT OR REPLACE
+INTO aquariumEntitiy(
+    id,
+    imageUrl,
+    name,
+    description,
+    currentTags,
+    requiredTags,
+    liters,
+    minIllumination,
+    currentIllumination,
+    currentCO2,
+    minCO2,
+    currentTemperature,
+    minTemperature,
+    maxTemperature,
+    currentPh,
+    minPh,
+    maxPh,
+    currentGh,
+    minGh,
+    maxGh,
+    currentKh,
+    minKh,
+    maxKh,
+    currentK,
+    minK,
+    maxK,
+    currentNO3,
+    minNO3,
+    maxNO3,
+    currentFe,
+    minFe,
+    maxFe,
+    currentCa,
+    minCa,
+    maxCa,
+    currentMg,
+    minMg,
+    maxMg,
+    currentPO4,
+    minPO4,
+    maxPO4,
+    currentAmmonia,
+    minAmmonia,
+    maxAmmonia
+) VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+deleteAquariumById:
+DELETE FROM
+aquariumEntitiy
+WHERE id = ?;

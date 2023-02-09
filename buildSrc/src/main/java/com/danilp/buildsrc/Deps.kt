@@ -21,6 +21,7 @@ object Deps {
         const val runtime = "app.cash.sqldelight:runtime:${Versions.sqlDelight}"
         const val androidDriver = "app.cash.sqldelight:android-driver:${Versions.sqlDelight}"
         const val nativeDriver = "app.cash.sqldelight:native-driver:${Versions.sqlDelight}"
+        const val coroutine = "app.cash.sqldelight:coroutines-extensions:${Versions.sqlDelight}"
     }
 
     object Coroutines {

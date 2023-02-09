@@ -1,0 +1,60 @@
+CREATE TABLE dwellerEntity(
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    aquariumId INTEGER NOT NULL,
+    imageUrl TEXT,
+    name TEXT,
+    genus TEXT,
+    amount INTEGER,
+    description TEXT,
+    tags TEXT,
+    liters REAL,
+    minTemperature REAL,
+    maxTemperature REAL,
+    minPh REAL,
+    maxPh REAL,
+    minGh REAL,
+    maxGh REAL,
+    minKh REAL,
+    maxKh REAL,
+    status TEXT,
+    statusTags TEXT
+);
+
+getAllDwellersByAquarium:
+SELECT *
+FROM dwellerEntity
+WHERE aquariumId = ?;
+
+getDwellerById:
+SELECT *
+FROM dwellerEntity
+WHERE id = ?;
+
+insertDweller:
+INSERT OR REPLACE
+INTO dwellerEntity(
+    id,
+    aquariumId,
+    imageUrl,
+    name,
+    genus,
+    amount,
+    description,
+    tags,
+    liters,
+    minTemperature,
+    maxTemperature,
+    minPh,
+    maxPh,
+    minGh,
+    maxGh,
+    minKh,
+    maxKh,
+    status,
+    statusTags
+) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+
+deleteDwellerById:
+DELETE FROM
+dwellerEntity
+WHERE id = ?;

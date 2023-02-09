@@ -3,14 +3,6 @@ package com.danilp.professionalaquaristmobileapp.android
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
-import com.danilp.professionalaquaristmobileapp.Greeting
 import com.danilp.professionalaquaristmobileapp.android.ui.theme.ProfessionalAquaristMobileAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -18,26 +10,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             ProfessionalAquaristMobileAppTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    GreetingView(Greeting().greet())
-                }
+
             }
         }
-    }
-}
-
-@Composable
-fun GreetingView(text: String) {
-    Text(text = text)
-}
-
-@Preview
-@Composable
-fun DefaultPreview() {
-    ProfessionalAquaristMobileAppTheme {
-        GreetingView("Hello, Android!")
     }
 }

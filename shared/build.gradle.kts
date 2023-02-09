@@ -14,7 +14,7 @@ kotlin {
             }
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -30,6 +30,7 @@ kotlin {
             dependencies {
                 with(Deps.SQLDelight) {
                     implementation(runtime)
+                    implementation(coroutine)
                 }
             }
         }
